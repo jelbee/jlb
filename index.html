@@ -1,0 +1,317 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Jay Elbee</title>
+		 <link href="web/css/bootstrap.min.css" rel="stylesheet">
+		<link href="web/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		 <script src="web/js/bootstrap.min.js"></script>
+		 <script src="web/js/jquery.min.js"></script>
+	 <!-- Custom files -->
+		<link href="web/css/style.css" rel='stylesheet' type='text/css' />
+   	 <!-- Custom Theme files -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		
+	<!--charts-->
+	<script src="web\js\Chart.js"></script>
+	<!----//webfonts---->
+		<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+	<!----//webfonts---->
+		<script type="text/javascript">
+				$(function() {
+				  $('a[href*=#]:not([href=#])').click(function() {
+				    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			
+				      var target = $(this.hash);
+				      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				      if (target.length) {
+				        $('html,body').animate({
+				          scrollTop: target.offset().top
+				        }, 1000);
+				        return false;
+				      }
+				    }
+				  });
+				});
+		</script>
+  </head>
+  <body>
+    <div id="top" class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+           <a class="nav-icon" href="#"> <img src="web/images/nav-icon.png " /> </a>
+			<span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="web/images/inf.png"></a>
+        </div>
+        <div class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Start</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+      <!----start-slider---->
+         <!----slider-requried-files--->
+        <!----//slider-requried-files--->
+        <!---start-image-slider---->
+		<div class="slideshow">
+		   <div>
+		     <h1>Jay Elbee</h1>
+		     <span class="border"> </span>
+		     <p>Web Designer & Developer</p>
+		   </div>
+		    <div>
+		     <h1>May I introduce my self?</h1>
+		   </div>
+		</div>
+		<div class="go_btn">
+		          <a class="button" href="#">Go Ahead</a>
+		 </div>
+		<!-----start-slider-script---->
+		<script>
+			$(function() {
+				$(".slideshow > div:gt(0)").hide();
+				setInterval(function() { 
+				  $('.slideshow > div:first')
+				    .fadeOut(1000)
+				    .next()
+				    .fadeIn(1000)
+				    .end()
+				    .appendTo('.slideshow');
+				},  3000);
+				
+			});
+		</script>
+		<!-----//End-slider-script---->
+	</div>
+        <!----//End-slider---->
+    <script src="web/js/jquery.min.js"></script>
+    <script src="web/js/bootstrap.min.js"></script>
+    <!----//End-container---->
+  		<!----//-container---->
+<div  class="about me" id="about">  
+		<div class="container">
+			<div class="row content-top">
+				<div class="col-md-12  text-center"><br>
+						<div style ="text-align:center;"><img src="web\images\profpic.jpg" id="profpic"></div>
+							<p>I have a keen interest in web design & development, service design & data visualisation.<br><br>
+								I value simplicity, communication &	intelligence.<br><br>
+								If I could have any superpower, it would be that I could speak all languages.<br><br>
+								So far, I've given 11 pints of blood in my life.<br><br>
+								I walk, on average, 40km per week and run 27km.<br><br>
+								I drink, on average, 14 cups of coffee and 21 cups of green tea per week.<br><br>
+								...and I really love listening to and making music. From classical to house, blues to funk, soul to electro. Love it...<br><br>
+								AYE!<br>
+								All things food & drink related (cooking, dining, nutrition)<br>
+								Running/Walking<br>
+								Snowsports<br><br>
+								NAW!<br>
+								Heights<br>
+								Hearing other peoples music through their headphones on public transport<br>
+								Noisy Eaters<br><br>
+								<canvas id="bar" height="350" width="400"></canvas>
+								<canvas id="radar" height="350" width="400"></canvas>
+							</p>
+						<script>
+
+		var barChartData = {
+			labels : ["Microsoft Office","HTML & CSS","JavaScript","Data Replay","PHP","DOORs","PTC Integrity", "Matlab"],
+			datasets : [
+				{
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,1)",
+					data : [4,3,2,3,2,3,1,1]
+				}
+			]
+			
+		}
+		
+			var myLine = new Chart(document.getElementById("bar").getContext("2d")).Bar(barChartData);
+			
+			var radarChartData = {
+			labels : ["Professionalism","Courage","Breadth","Resourcefulness","Teamwork","Common Sense","Adaptability"],
+			datasets : [
+					{
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#fff",
+					data : [5,4,3,3,3,4,5,]
+				}
+			]
+			
+		}
+
+	var myRadar = new Chart(document.getElementById("radar").getContext("2d")).Radar(radarChartData,{scaleShowLabels : false, pointLabelFontSize : 10});
+	
+	</script>
+ 				</div>	
+			</div>
+		</div>
+	</div>
+		<!----//-container---->
+<div  class="work" id="work">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 text-center">
+					<div class="grid ">
+						<img src="web/images/icon1.png" alt=""/>
+						<h3>Tools</h3>
+								</div>
+									<div>		
+									<img src="#">Laptop:Acer Aspire S3<br><br>
+									<img src="#">Tablet: Google Nexus 7<br><br>
+									<img src="#">Phone: HTC One (M8)<br><br>
+								</div>
+				</div>
+					<div class="col-md-4 text-center">
+						<div class="grid ">
+							<img src="web/images/icon2.png" alt=""/>
+							<h3>Target Market</h3>
+							<p>I'm keen to help out anyone in the creative industry (artist, musicians,writers, poets, graphic designers, animators etc.) that would like to establish a portfolio website to increase their professionalism and credability.</p>
+						</div>
+					</div>
+					<div class="col-md-4 text-center">
+						<div class="grid ">
+							<img src="web/images/icon3.png" alt=""/>
+							<h3>Research Interests</h3>
+							<p>Decision/Game Theory, Psychology, Sociology, Philosophy, Behavioural/Congnitive science</p>
+					</div>
+					</div>
+					<div class="clearfix"></div>
+			</div>
+		</div>	
+	</div>	
+		
+		<link rel="stylesheet" type="text/css" href="web/css/component.css" />
+		<script src="web/js/modernizr.custom.js"></script>
+	<div  class="portfolio" id="portfolio">
+		<div class="container demo-3">
+				<ul class="col-md-12 grid cs-style-3">
+						<li class="col-md-6">
+							<figure>
+								<img class="responsive-img img1" src="web/images/pic1.png" alt="img03">
+								<figcaption>
+									<h4>Lorem ipsum dolor sit </h4>
+									<span>amet conseteter sadipscing elitr</span>
+								</figcaption>
+							</figure>
+							<a data-toggle="modal" data-target=".bs-example-modal-md" href="#"><label class="search-icon"> </label></a>
+						</li>
+						<li class="col-md-6">
+							<figure>
+								<img class="responsive-img img1" src="web/images/pic2.png" alt="img01">
+								<figcaption>
+									<h4>Lorem ipsum dolor sit </h4>
+									<span>amet conseteter sadipscing elitr</span>
+								</figcaption>
+							</figure>
+							<a data-toggle="modal" data-target=".bs-example-modal-md" href="#"><label class="search-icon"> </label></a>
+						</li>
+						<li class="col-md-6">
+							<figure>
+								<img class="responsive-img img1" src="web/images/pic3.png" alt="img02">
+								<figcaption>
+									<h4>Lorem ipsum dolor sit </h4>
+									<span>amet conseteter sadipscing elitr</span>
+								</figcaption>
+							</figure>
+							<a data-toggle="modal" data-target=".bs-example-modal-md" href="#"><label class="search-icon"> </label></a>
+						</li> 
+						<li class="col-md-6">
+							<figure>
+								<img class="responsive-img img1" src="web/images/pic4.png" alt="img04">
+								<figcaption>
+									<h4>Lorem ipsum dolor sit </h4>
+									<span>amet conseteter sadipscing elitr</span>
+								</figcaption>
+							</figure>
+							<a data-toggle="modal" data-target=".bs-example-modal-md" href="#"><label class="search-icon"> </label></a>
+						</li>
+						<li>
+					</ul>
+					 <div class="view">
+						<a class="view-btn" href="#">View More <span> </span></a>
+					</div>
+				</div>
+
+
+	</div>
+		<div>
+		<iframe src='http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0ApmzBefM_b5hdGw3OEs4OGZsZnZ0a1BIUVVzdEphb3c&font=Bevan-PotanoSans&maptype=toner&lang=en&debug=true&height=650' width='100%' height='650' frameborder='0'></iframe>
+		</div>
+		<!-- /container -->
+		<script src="web/js/toucheffects.js"></script>
+<!----//End-container---->
+<!----start-model-box---->
+						<div class="modal fade bs-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+						  <div class="modal-dialog modal-lg">
+						    <div class="modal-content light-box-info">
+						    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><img src="web/images/close.png" alt="" /></button>
+						     <h3>Place Yours content here</h3>
+						    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut adipiscing, sapien a ullamcorper pharetra, sem lectus faucibus ante, ac aliquam sem nisl ac lorem. Integer posuere neque sem, non egestas quam scelerisque in. Maecenas ut vestibulum justo. Suspendisse id tortor eu lorem pharetra suscipit pellentesque in sem. Fusce et urna posuere, elementum augue sed, euismod risus. Pellentesque pulvinar quam felis, rutrum blandit magna malesuada non. Aenean sapien felis, vulputate gravida elementum quis, dignissim ut libero. Quisque eget euismod augue. Aliquam nunc odio, ultricies quis tristique sit amet, mattis non justo. Nunc pharetra ut eros at ultricies.</p>
+						    </div>
+						  </div>
+						</div>
+						<!----start-model-box---->
+<!----start-contact---->
+ <div  class="contact" id="contact">
+		<div class="container contact">
+				<h5>Get in touch!</h5>
+					<div class="row contact-form">
+				  			<form>
+				  				<div class="col-md-6 text-box">
+									<input type="text" placeholder="Name" />
+								</div>
+								<div class="col-md-6 text-box ">
+									<input type="text" placeholder="Email" />
+								</div>
+								<div class="col-md-12 textarea">
+										<textarea>How can I help you?</textarea>
+								</div>
+								<input class="con-button " type="submit" value="Send" />
+							</form>
+						</div>
+				</div>
+			</div>
+		<!----//End-contact---->
+		<div class="footer">
+			<div class="container">
+				<div class="row social-icons">
+					<div class="col-xs-4 text-center">
+						<a href="#"><img class="responsive-img" src="web/images/footr-twb.png" alt=""/></a>
+					</div>
+					<div class="col-xs-4 text-center">
+						<a href="#"><img class="responsive-img" src="web/images/footr-dbl.png" alt=""/> </a>
+						
+					</div>
+					<div class="col-xs-4 text-center">
+						<a href="#"><img class="responsive-img" src="web/images/footr-fb.png" alt=""/> </a>
+					</div>
+				</div>
+				<div class="row copy-right">
+					<div class="col-md-12 text-center">
+						<p>Copyright &#169; 2014 All Rights Reserved |Template by &nbsp;<a href="http://w3layouts.com">W3Layouts</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+					<a href="#top" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"> </span></a>
+  </body>
+</html>
